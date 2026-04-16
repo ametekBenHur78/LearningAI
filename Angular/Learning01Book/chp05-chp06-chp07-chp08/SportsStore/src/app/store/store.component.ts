@@ -38,9 +38,8 @@ export class StoreComponent {
         this.changePage(1);
     }
 
-     get pageCount(): number {
-        return Math.ceil(this.repository
-        .getProducts(this.selectedCategory).length / this.productsPerPage)
+    get pageCount(): number {
+        return Math.ceil(this.repository.getProducts(this.selectedCategory).length / this.productsPerPage);
     }
 
     addProductToCart(product: Product) {
